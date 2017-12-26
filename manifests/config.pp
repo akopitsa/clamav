@@ -7,6 +7,6 @@ class clamav::config {
     owner  => 'clamav',
     group  => 'adm',
     mode   => '0444',
-    source => templates("clamav/freshclam.conf.erb"),
+    source => template("clamav/freshclam.conf.erb"),
   }
 }
