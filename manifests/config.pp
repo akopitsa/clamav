@@ -3,7 +3,7 @@
 #
 class clamav::config {
   file { '/etc/clamav/freshclam.conf':
-    ensure => 'present',
+    ensure => 'file',
     owner  => 'clamav',
     group  => 'adm',
     mode   => '0444',
