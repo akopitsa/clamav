@@ -3,14 +3,14 @@
 #
 class clamav::service {
   service { 'clamav-freshclam':
-    ensure    => 'present',
+    ensure    => 'running',
     name      => 'clamav-freshclam',
     enable    => true,
     hasstatus => true,
     hasrestart => true,
   }
   service { 'clamav-daemon':
-    ensure    => 'present',
+    ensure    => 'running',
     name      => 'clamav-daemon',
     enable    => true,
     hasstatus => true,
