@@ -1,7 +1,9 @@
 # Class: clamav::config
 #
 #
-class clamav::config {
+class clamav::config (
+  Array[String] $databasecustom = $clamav::databasecustom,
+) {
   file { '/etc/clamav/freshclam.conf':
     ensure => 'file',
     owner  => 'clamav',
